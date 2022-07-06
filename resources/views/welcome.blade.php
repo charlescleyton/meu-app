@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bem Vindo:{{ $nome }} </h1>
 
- 
+    @foreach ($ingredientes as $ing)
+    <p>Meu bolo tem: {{$ing}}</p>
+    @endforeach
+    
+  {{-- @for($i=0; $i<count($igredientes); $i++)
+       <p>Meu bolo tem: {{$igredientes[$i]}}</p>
+      
+  @endfor --}}
 </body>
 </html>

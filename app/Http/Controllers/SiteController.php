@@ -6,23 +6,19 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
-    public function user(Request $r) {
+
+    public function index()
+    {
+
         
-        $data = ['quantidade' => $r ->qnt];
-        
-        return view('usuarios', $data);
-    }
+        $qualquer_coisa = [
+            'ingredientes' => [
+                'farinha',
+                'ovos',
+                'farinha 2',
+                'ovos 2'
+            ] ];
     
-    public function index() {
-   
-        $nome = 'Charles';  
-        
-        $data = ['nome' => $nome,];
-
-        return view('welcome', $data);
-    }
-
-    public function exit() {
-        return view('sair');
+        return view('welcome', $qualquer_coisa);
     }
 }
